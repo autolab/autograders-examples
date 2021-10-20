@@ -1,0 +1,11 @@
+all:
+	tar xvf autograde.tar
+	cp <handin_file> autograde_dir
+	# some languages don’t need compiling and it’s not necessary
+	# to have a Makefile for every assessment
+	(cd autograde_dir; make clean; make; \
+	./feed_and_log.sh; \
+	./compare_and_grade.sh)
+clean:
+	rm -rf *~ autograde_dir
+

@@ -8,7 +8,10 @@ Shell
 
 ### Assessment Scenario
 A common scenario that instructors find themselves in is that they want to compare student output with expected output and assign points accordingly. This autograder template offers a very simple template with strong assumptions for input output comparison. It is up to the instructors’ discretion to decide the language of their assignment and the necessary supplementary files to compile a submission.
+
 This autograder also offers a concrete demo of the template with a simple Golang assessment fiblab, where students implement a method in Golang that calculates the nth Fibonacci number. Students' handin is compiled with main.go which invokes student implementation and output a single line result. The autograder feeds predefined test input into this compiled executable program, writes student output, and compares student output with expected output.
+
+Makefile.template is a template for autograde-Makefile with pseudocode that executes the autograding job. Build your own Makefile and autograde.tar by replacing the supplementary files and the pseudocode in the relevant template files!
 
 ### Handin Format
 fib.go
