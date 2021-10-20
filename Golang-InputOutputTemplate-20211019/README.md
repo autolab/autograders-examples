@@ -15,7 +15,7 @@ fib.go
 
 ### autograder.tar Directory Content
 ```
-# make routine that compiles <handin_file> into a program
+# make routine that compiles fib.go into a program
 Makefile
 
 # test input to student program; test case per line
