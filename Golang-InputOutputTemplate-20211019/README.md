@@ -7,19 +7,43 @@ Golang
 Shell
 
 ### Assessment Scenario
-This a demo
+A common scenario that instructors find themselves in is that they want to compare student output with expected output and assign points accordingly. This autograder template offers a very simple template with strong assumptions for input output comparison. It is up to the instructors’ discretion to decide the language of their assignment and the necessary supplementary files to compile a submission.
+This autograder also offers a concrete demo of the template with a simple Golang assessment fiblab, where students implement a method in Golang that calculates the nth Fibonacci number. Students' handin is compiled with main.go which invokes student implementation and output a single line result. The autograder feeds predefined test input into this compiled executable program, writes student output, and compares student output with expected output.
 
 ### Handin Format
-The expected format/name of your student handin, e.g. handin.tar, hello.c.
+fib.go
 
 ### autograder.tar Directory Content
-List your autograder.tar content here and briefly explain what each file does.
-e.g.
 ```
-# Compiles hello.c
+# make routine that compiles <handin_file> into a program
 Makefile
-# Autolab autograder
-driver.sh
-# Empty C file that you will edit
-hello.c
+
+# test input to student program; test case per line
+test_input
+
+# expected output from student program; test case per line
+test_output
+
+# feed test_input to student program and writes output to student_output;
+# test case per line
+# this script assumes that the compiled program from student's handin file
+# reads test case input one at a time
+feed_and_log.sh
+
+# compare student_output and test_output line by line and echo the actual
+# autograding result
+compare_and_grade.sh
+
+# dependency files needed to compile fib.go
+# depending on the specific needs, instructors should replace these two files
+# with their own supplementary files
+main.go
+go.mod
+
+# autograder template files with pseudocode;
+# this offers a simple starting point for those who want to write
+# their own input output autograder
+# replace the feed_and_log.sh and Makefile with your own
+Makefile.template
+feed_and_log.sh.template
 ```
