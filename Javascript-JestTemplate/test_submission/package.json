@@ -1,0 +1,8 @@
+{   
+  "scripts": {
+      "test": "jest" 
+    },
+    "jest": {
+        "reporters": ["default","<rootDir>/score-reporter.js"]
+    }
+}
