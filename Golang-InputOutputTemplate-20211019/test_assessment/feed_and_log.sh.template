@@ -1,0 +1,25 @@
+#!/bin/bash
+
+input="test_input"
+output="student_output"
+while IFS= read -r line
+do
+  # It is assumed that:
+  # 1. The executed program prints the relevant output
+  #    to standard out
+  # 2. The executable program outputs some wildcard character when
+  #    the program crashes.
+  # 3. A unique line in the format of PROBLEM:<problem name> denotes
+  #    the input test suite for a particular problem
+  # It is up to the instructors’ discretion to make sure that
+  # a 1-on-1 correspondence exists between lines in student output and
+  # expected output.
+  if [[ $line =~ PROBLEM:(.*) ]]
+  then
+    echo Start testing for ${BASH_REMATCH[1]}.
+    echo $line >> $output
+  else
+    <command that executes the compiled program with $line> >> $output
+  fi
+done < $input
+echo Finished running the tests.
