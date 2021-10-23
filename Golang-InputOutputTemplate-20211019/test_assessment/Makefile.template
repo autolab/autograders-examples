@@ -1,0 +1,4 @@
+all:
+	<compile command specific to the assessment>
+clean:
+	rm -rf *~ <executable program specific to the assessment>
