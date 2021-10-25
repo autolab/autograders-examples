@@ -45,15 +45,22 @@ test('merge_sort sorts array', () => {
 });
 
 test('merge_sort should be ~nlogn', () => {
+
+  // creates a mock function that we can track stats of
+  // https://jestjs.io/docs/mock-functions
   const mock_comparator = jest.fn(int_comparator);
+
   const array_length = Math.floor(Math.random() * 100);
   const input_array = Array.from({length: array_length}, () => Math.floor(Math.random() * 100));
   const buffer = 1;
 
+  // sort using default javascript sort
   const sorted_array = [...input_array].sort(int_comparator);
   const result_arary = merge_sort(input_array,mock_comparator);
   
   expect(result_arary).toMatchObject(sorted_array);
+
+  // checking the number of comparisons made ~
   expect(mock_comparator.mock.calls.length).toBeLessThan((array_length+buffer)*Math.log2(array_length+buffer));
 });
 
