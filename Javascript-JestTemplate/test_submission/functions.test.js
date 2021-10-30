@@ -1,6 +1,4 @@
-const sum = require('./functions/sum');
-const bubble_sort = require('./functions/bubble-sort');
-const merge_sort = require('./functions/merge-sort');
+const {sum, bubble_sort, merge_sort} = require('../functions');
 
 const int_comparator = (a, b) => {
   if (a > b) return 1;
