@@ -19,6 +19,9 @@ Put your assessment's languages here, e.g. Python, C++, Ruby.
 ### Autograder Language
 Put your autograder's languages here, e.g. Shell, Python.
 
+### Autograding Environment Packages
+Put the required packages for your autograder here so that instructors know what image to provide to run your autograder.
+
 ### Assessment Scenario
 Briefly explain your assessment, e.g. Students are required to implement mergesort and quicksort.
 
