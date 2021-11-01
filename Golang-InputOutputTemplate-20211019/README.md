@@ -6,6 +6,9 @@ Golang
 ### Autograder Language
 Shell
 
+### Autograding Environment Packages
+Golang is required for this autograder. Consult their [official documentation](https://golang.org/doc/install).
+
 ### Assessment Scenario
 A common scenario that instructors find themselves in is that they want to compare student output with expected output and assign points accordingly. This autograder template offers a very simple template with strong assumptions for input output comparison. It is up to the instructors’ discretion to decide the language of their assignment and the necessary supplementary files to compile a submission.
 
