@@ -1,7 +1,9 @@
 #include "tests.h"
 #include "sort.h"
+#include <time.h>
 
-#define LONG_ARR_LEN 1e6
+#define LONG_ARR_LEN 1000000
+#define SHORT_ARR_LEN 1000
 
 int cmp(const void *a, const void *b) {
    return ( *(int*)a - *(int*)b );
@@ -83,6 +85,16 @@ int test_basic(void) {
     return score;
 }
 
+/**
+ * @brief Tests for edge cases related to length
+ * 
+ * Tests the sorting implementation against the following possible edge cases:
+ * - length 0 (2 points)
+ * - length 1 (8 points)
+ * - very large length (10 points)
+ * 
+ * @return an integer score, out of 20
+ */
 int test_length_edge_cases(void) {
     int score = 0;
 
@@ -100,7 +112,7 @@ int test_length_edge_cases(void) {
         sorted_len_1[i] = arr_len_1[i];
     }
 
-    // running sort separately as a 2nd check for any array out of bound reads
+    // sort for each element as a check for any array out of bound writes
     for (int i = 0; i < 8; i++) {
         sort(arr_len_1, 1);
     }
@@ -111,5 +123,90 @@ int test_length_edge_cases(void) {
         }
     }
 
+    int arr_long[LONG_ARR_LEN];
+    int sorted_long[LONG_ARR_LEN];
+    for (int i = 0; i < LONG_ARR_LEN; i++) {
+        arr_long[i] = rand();
+        sorted_long[i] = arr_long[i];
+    }
 
+    sort(arr_long, LONG_ARR_LEN);
+    qsort(sorted_long, LONG_ARR_LEN, sizeof(int), cmp);
+
+    if (arrays_identical(arr_long, sorted_long, LONG_ARR_LEN)) {
+        score += 10;
+    }
+
+    return score;
+}
+
+/**
+ * @brief Tests for timing of the sort implementation
+ * 
+ * Tests the sorting implementation against two arrays of lengths [1k, 1M],
+ * measuring the time spent on each sort. Then compares the ratio between
+ * the time. Checks for an O(n log n) implementation.
+ * 
+ * 50 points - ratio <= 10k
+ * 25 points - 10k < ratio <= 1M
+ * 10 points - 1M < ratio <= 10M
+ * 0 points - ratio > 10M
+ * 
+ * @return an integer score, out of 50
+ */
+int test_timing(void) {
+    clock_t start, end;
+    double short_time, long_time, ratio;
+
+    srand(31415926); // fixed seed for reproducibility
+
+    int arr_short[SHORT_ARR_LEN];
+    int sorted_short[SHORT_ARR_LEN];
+
+    for (int i = 0; i < SHORT_ARR_LEN; i++) {
+        arr_short[i] = rand();
+        sorted_short[i] = arr_short[i];
+    }
+
+    start = clock();
+    sort(arr_short, SHORT_ARR_LEN);
+    end = clock();
+    short_time = (double)(end - start) / CLOCKS_PER_SEC;
+
+    qsort(sorted_short, SHORT_ARR_LEN, sizeof(int), cmp);
+
+    if (!arrays_identical(arr_short, sorted_short, SHORT_ARR_LEN)) {
+        return 0;
+    }
+
+    int arr_long[LONG_ARR_LEN];
+    int sorted_long[LONG_ARR_LEN];
+
+    for (int i = 0; i < LONG_ARR_LEN; i++) {
+        arr_long[i] = rand();
+        sorted_long[i] = arr_long[i];
+    }
+
+    start = clock();
+    sort(arr_long, LONG_ARR_LEN);
+    end = clock();
+    long_time = (double)(end - start) / CLOCKS_PER_SEC;
+
+    qsort(sorted_long, LONG_ARR_LEN, sizeof(int), cmp);
+
+    if (!arrays_identical(arr_long, sorted_long, LONG_ARR_LEN)) {
+        return 0;
+    }
+
+    ratio = long_time / short_time;
+
+    if (ratio <= 1e5) {
+        return 50;
+    } else if (ratio <= 1e6) {
+        return 25;
+    } else if (ratio <= 1e7) {
+        return 10;
+    } else {
+        return 0;
+    }
 }
