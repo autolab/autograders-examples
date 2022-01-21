@@ -1,0 +1,7 @@
+all:
+	tar xvf autograde.tar
+	cp twosum.py test_submission
+	(cd test_submission; ./driver.sh)
+
+clean:
+	rm -rf *~ test_submission
