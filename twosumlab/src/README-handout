@@ -1,4 +1,4 @@
-For this lab, you should write a Python program, called "twosum.c".
+For this lab, you should write a Python program, called "twosum.py".
 
 Given an array of integers `nums` and an integer `target`, your program should return indices of the two numbers such that they add up to target.
 
@@ -26,3 +26,5 @@ linux> make clean; make;
 Files:
 README This file
 twosum.py Empty Python file that you will edit
+driver.py Autograding file used to test your submission
+tests.py File for writing custom test cases

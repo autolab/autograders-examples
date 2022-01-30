@@ -1,7 +1,7 @@
 import sys
 import random
 import twosum
-from custom import test_cases
+from tests import test_cases
 import time
 
 '''
@@ -67,7 +67,7 @@ def test_basic(num_tests):
   return score
 
 '''
-Tests custom cases provided by user.
+Tests tests cases provided by user.
 
 Each test case is formatted as a list of 4 elements:
 0. Name of the test case (string)
@@ -75,7 +75,7 @@ Each test case is formatted as a list of 4 elements:
 2. Target sum (int)
 3. Points rewarded (int)
 '''
-def test_custom(test_cases):
+def test_tests(test_cases):
   score = 0
 
   for case in test_cases:
@@ -124,8 +124,8 @@ def test_complex():
   return 10
 
 basic_score = test_basic(10)
-custom_score = test_custom(test_cases)
+tests_score = test_tests(test_cases)
 complex_score = 0
-# complex_score = test_complex()
+complex_score = test_complex()
 
-print("{\"scores\": {\"Correctness\": %s, \"Time\": %s}}" % (basic_score + custom_score, complex_score))
+print("{\"scores\": {\"Correctness\": %s, \"Time\": %s}}" % (basic_score + tests_score, complex_score))

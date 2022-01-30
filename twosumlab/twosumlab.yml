@@ -1,12 +1,12 @@
 ---
 general:
-  name: pythonlab
+  name: twosumlab
   description: ''
-  display_name: pythonlab
+  display_name: twosumlab
   handin_filename: twosum.py
   handin_directory: handin
   max_grace_days: 0
-  handout: pythonlab-handout.tar
+  handout: twosumlab-handout.tar
   writeup: writeup/hello.html
   max_submissions: -1
   disable_handins: false

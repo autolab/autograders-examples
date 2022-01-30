@@ -1,10 +1,10 @@
 require "AssessmentBase.rb"
 
-module Pythonlab
+module Twosumlab
   include AssessmentBase
 
   def assessmentInitialize(course)
-    super("pythonlab",course)
+    super("twosumlab",course)
     @problems = []
   end
 

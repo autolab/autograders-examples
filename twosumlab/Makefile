@@ -10,13 +10,21 @@ all: handout handout-tarfile
 handout: 
 	# Rebuild the handout directory that students download
 	(rm -rf $(LAB)-handout; mkdir $(LAB)-handout)
-	cp -p test_submission/README-handout $(LAB)-handout/README
-	cp -p test_submission/twosum.py-handout $(LAB)-handout/twosum.py
+	cp -p src/README-handout $(LAB)-handout/README
+	cp -p src/twosum.py-handout $(LAB)-handout/twosum.py
+	cp -p src/driver.py $(LAB)-handout/driver.py
+	cp -p src/tests.py-handout $(LAB)-handout/tests.py
 
 handout-tarfile: handout
 	# Build *-handout.tar and autograde.tar
 	tar cvf $(LAB)-handout.tar $(LAB)-handout
-	tar cvf autograde.tar test_submission
+	tar cvf autograde.tar src
+
+test: 
+	(rm -rf test-autograder; mkdir test-autograder)
+	cp -p autograde-Makefile test-autograder/Makefile
+	cp -p autograde.tar test-autograder/autograde.tar
+	cp -p src/twosum.py test-autograder/twosum.py
 
 clean:
 	# Clean the entire lab directory tree.  Note that you can run
