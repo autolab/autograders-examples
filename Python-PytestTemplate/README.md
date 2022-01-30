@@ -1,7 +1,7 @@
 # Pytest Template Example Autograder
 
 ### Special Credit
-Based on the pull request #969 by BrianKolowitz on Mar 7 2018. A very neat example of python autograder that uses pytest.
+Based on the pull request [#969](https://github.com/autolab/Autolab/pull/969) by BrianKolowitz on Mar 7 2018. A very neat example of python autograder that uses pytest.
 
 ### Assessment Language
 Python
@@ -13,7 +13,7 @@ Python
 pip and python3 are needed for the autograding environment.
 
 ### Assessment Scenario
-Briefly explain your assessment, e.g. Students are required to implement mergesort and quicksort.
+Students are required to implement two methods: get_name() which returns "Batman" and get_age() which returns 30. Instructors are encouraged to add methods to test and implement the additional tests accordingly.
 
 ### Handin Format
 main.py
