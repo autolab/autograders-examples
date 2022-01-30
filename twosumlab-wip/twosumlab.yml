@@ -1,0 +1,28 @@
+---
+general:
+  name: twosumlab
+  description: ''
+  display_name: twosumlab
+  handin_filename: twosum.py
+  handin_directory: handin
+  max_grace_days: 0
+  handout: twosumlab-handout.tar
+  writeup: writeup/hello.html
+  max_submissions: -1
+  disable_handins: false
+  max_size: 2
+  has_svn: false
+  category_name: Lab
+problems:
+- name: Correctness
+  description: ''
+  max_score: 17.0
+  optional: false
+- name: Time
+  description: ''
+  max_score: 10.0
+  optional: false
+autograder:
+  autograde_timeout: 180
+  autograde_image: rhel.img
+  release_score: true
