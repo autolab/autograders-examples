@@ -15,3 +15,7 @@ def two_sum_brute(nums, target):
         for j, b in enumerate(nums[i+1:], start=0):
             if a+b==target:
                 return [i, j+i+1]
+                
+# invalid naive solution
+# def two_sum(nums, target):
+#   return [0, 1]
