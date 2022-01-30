@@ -1,7 +1,7 @@
 # Pytest Template Example Autograder
 
 ### Special Credit
-Based on the pull request #969 by BrianKolowitz on Mar 7 2018. A very neat example of python autograder that uses pytest.
+Based on the pull request [#969](https://github.com/autolab/Autolab/pull/969) by BrianKolowitz on Mar 7 2018. A very neat example of python autograder that uses pytest.
 
 ### Assessment Language
 Python
