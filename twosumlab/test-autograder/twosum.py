@@ -1,6 +1,6 @@
 def two_sum(nums, target):
   hist = {}
-  
+
   for i in range(len(nums)):
     if target - nums[i] in hist:
       return [hist[target - nums[i]], i]

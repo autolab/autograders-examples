@@ -67,7 +67,7 @@ def test_basic(num_tests):
   return score
 
 '''
-Tests tests cases provided by user.
+Tests custom test cases provided by user.
 
 Each test case is formatted as a list of 4 elements:
 0. Name of the test case (string)
@@ -75,14 +75,16 @@ Each test case is formatted as a list of 4 elements:
 2. Target sum (int)
 3. Points rewarded (int)
 '''
-def test_tests(test_cases):
+def test_custom(test_cases):
   score = 0
 
   for case in test_cases:
     print(case[0])
 
-    res = twosum.two_sum(case[1], case[2])
-    if is_valid(case[1], case[2], res):
+    arr = case[1]
+    target = case[2]
+    res = twosum.two_sum(arr, target)
+    if is_valid(arr, target, res):
       print('Test passed!')
       score += case[3]
       print('Points rewarded: %s/%s\n' % (case[3], case[3]))
@@ -124,7 +126,7 @@ def test_complex():
   return 10
 
 basic_score = test_basic(10)
-tests_score = test_tests(test_cases)
+tests_score = test_custom(test_cases)
 complex_score = 0
 complex_score = test_complex()
 
