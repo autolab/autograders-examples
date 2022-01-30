@@ -1,5 +1,5 @@
 '''
-File for storing custom test cases.
+Write your custom test cases in this file.
 
 Each test case is formatted as an array of 4 elements:
 0. Name of the test case
