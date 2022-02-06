@@ -1,4 +1,5 @@
 public class TestMissing {
+  // Test cases
   static int[] emptyArray = new int[]{};
   static int[] singleElementArray = new int[]{5};
   static int[] justOneArray = new int[]{1};
@@ -7,6 +8,7 @@ public class TestMissing {
   static int[] randomMissingArray = new int[]{5, 1, 2, 8, 3, 9, 11};
 
   public static void main(String[] args) {
+    // Can only receive credit if all tests are passed
     assert Missing.findSmallestMissingPositive(emptyArray) == 1;
     assert Missing.findSmallestMissingPositive(emptyArray) == 1;
     assert Missing.findSmallestMissingPositive(emptyArray) == 2;

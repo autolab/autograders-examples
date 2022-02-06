@@ -1,0 +1,15 @@
+This directory contains all of the code files for the Missing Positives Lab,
+including the files that are handed out to students.
+
+Files:
+
+# Autograder and solution files
+Makefile                Makefile that compiles both Missing.java and TestMissing.java
+README                  README for this directory
+TestMissing.java        Tests for Missing.java
+driver.sh*              Autograder that runs TestMissing
+Missing.java            Solution file
+
+# Files that are handed out to students
+Makefile-handout        Makefile handed out to students (only compiles Missing.java instead of both Missing.java and TestMissing.java)
+Missing.java-handout         Starter file handed out to students

@@ -2,8 +2,6 @@
 
 all: 
 	javac Missing.java
-	javac TestMissing.java
 
 clean:
 	rm -rf *~ Missing.class
-	rm -rf *~ TestMissing.class
