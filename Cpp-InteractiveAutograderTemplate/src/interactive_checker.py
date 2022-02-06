@@ -7,6 +7,8 @@ from subprocess import PIPE
 ORACLE_BINARY = "./oracle"
 STUDENT_BINARY = "./sorter"
 
+VERBOSE = True # change to False to disable interaction logs
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -43,10 +45,12 @@ def interactive_checker():
             break
 
         write(student_proc, data)
-        print(f"Relayed from {bcolors.OKGREEN}oracle{bcolors.ENDC} to {bcolors.OKBLUE}student{bcolors.ENDC}:\t\t{data}")
+        if VERBOSE:
+            print(f"Relayed from {bcolors.OKGREEN}oracle{bcolors.ENDC} to {bcolors.OKBLUE}student{bcolors.ENDC}:\t\t{data}")
         query = read(student_proc)
         write(oracle_proc, query)
-        print(f"Relayed from {bcolors.OKBLUE}student{bcolors.ENDC} to {bcolors.OKGREEN}oracle{bcolors.ENDC}:\t\t{query}")
+        if VERBOSE:
+            print(f"Relayed from {bcolors.OKBLUE}student{bcolors.ENDC} to {bcolors.OKGREEN}oracle{bcolors.ENDC}:\t\t{query}")
 
     print(autograder_result)
 
