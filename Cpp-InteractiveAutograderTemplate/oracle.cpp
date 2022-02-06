@@ -1,10 +1,12 @@
+#include <math.h>
+
 #include <algorithm>
 #include <iostream>
 #include <random>
 #include <sstream>
 #include <vector>
 
-#define N 4
+#define N 20
 
 using namespace std;
 
@@ -19,6 +21,7 @@ int main() {
   string answer_string;
   string array_string;
   string correctness;
+  string queries;
   ostringstream stream;
 
   // turn off IO buffering
@@ -97,13 +100,22 @@ int main() {
   // regarded as autograding result and not piped back to student binary
   cout << "AUTOGRADER_COMPLETE" << endl;
 
+  // query score scales inversely with number of queries made,
+  // ideally expecting N log(N) solution up to a scaling constant C
+  float C = 3.;
+  float query_score = min(C * (N * log(N) * 100. / n_queries), 100.);
   if (success) {
-    correctness = "{\"Correctness\": 100}";
+    correctness =
+        "{\"correctness\": 100, \"query_score\": " + to_string(query_score) +
+        string("}");
   } else {
-    correctness = "{\"Correctness\": 0}";
+    correctness = "{\"correctness\": 0, \"query_score\": 0 }";
+    queries = "{\"query_score\": 0}";
   }
 
-  cout << "{\"scores\": " + correctness + ", \"correct_answer\": \"" +
-              answer_string + "\", \"array:\": \"" + array_string + "\"}"
+  cout << "{\"scores\": " + correctness +
+              ", \"queries\": " + to_string(n_queries) +
+              ", \"correct_answer\": \"" + answer_string +
+              "\", \"array:\": \"" + array_string + "\"}"
        << endl;
 }
