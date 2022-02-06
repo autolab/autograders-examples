@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${default}",
+                "${workspaceFolder}/**"
+            ],
+            "compilerPath": "/usr/bin/clang",
+            "cppStandard": "c++14"
+        }
+    ],
+    "version": 4
+}
