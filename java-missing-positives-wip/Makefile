@@ -12,7 +12,6 @@ handout:
 	(rm -rf $(LAB)-handout; mkdir $(LAB)-handout)
 	cp -p src/Makefile-handout $(LAB)-handout/Makefile
 	cp -p src/Missing.java-handout $(LAB)-handout/Missing.java
-	cp -p src/TestMissing.java-handout $(LAB)-handout/TestMissing.java
 	cp -p src/driver.sh $(LAB)-handout
 
 handout-tarfile: handout
