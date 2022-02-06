@@ -6,7 +6,7 @@
 #include <sstream>
 #include <vector>
 
-#define N 20
+#define N 10
 
 using namespace std;
 
