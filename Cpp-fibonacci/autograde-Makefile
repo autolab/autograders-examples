@@ -1,0 +1,8 @@
+all:
+	tar xvf autograder.tar
+	cp fib.cpp test_autograder
+	
+	(cd test_autograder; make clean; make)
+
+clean:
+	rm -rf *~ test_autograder
