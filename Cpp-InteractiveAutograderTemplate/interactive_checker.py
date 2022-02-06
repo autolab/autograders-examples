@@ -22,6 +22,13 @@ class bcolors:
 def read(proc):
     return proc.stdout.readline().decode("utf-8").strip()
 
+def read_remaining(proc):
+    data = ""
+    while True:
+        new_data = read(proc)
+        print(new_data)
+        data += read(proc)
+
 # Outputs a line to student program
 def write(proc, message):
     proc.stdin.write(f"{message.strip()}\n".encode("utf-8"))
@@ -38,7 +45,7 @@ def interactive_checker():
 
         if "AUTOGRADER_COMPLETE" in data:
             print(f"Oracle has judged student answer")
-            autograder_result = read(oracle_proc)
+            autograder_result = read_remaining(oracle_proc)
             print(autograder_result)
             break
 
