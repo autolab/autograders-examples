@@ -1,0 +1,28 @@
+---
+general:
+  name: csortlab
+  display_name: C-sortlab
+  handin_filename: sort.c
+  handin_directory: handin
+  max_grace_days: 0
+  max_submissions: -1
+  max_size: 2
+  category_name: Autograding Demos
+  embedded_quiz: false
+problems:
+- name: Basic Functionality
+  description: ''
+  max_score: 30.0
+  optional: false
+- name: Edge cases
+  description: ''
+  max_score: 20.0
+  optional: false
+- name: Timing
+  description: ''
+  max_score: 50.0
+  optional: false
+autograder:
+  autograde_timeout: 20
+  autograde_image: autograding_image
+  release_score: true
