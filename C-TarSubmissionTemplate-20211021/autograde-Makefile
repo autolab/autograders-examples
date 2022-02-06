@@ -1,0 +1,8 @@
+all:
+	tar xvf autograde.tar
+	tar xvf handin.tgz
+	cp hello.c hellotar-handout
+	(cd C-TarSubmissionTemplate-20211021-handout; ./driver.sh)
+
+clean:
+	rm -rf *~ hellotar-handout
