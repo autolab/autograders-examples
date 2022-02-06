@@ -1,0 +1,12 @@
+all:
+	rm -rf autograder
+	mkdir autograder
+	cp autograde.tar autograder
+	cd autograder
+	tar xvf autograde.tar
+	g++ -o oracle oracle.cpp
+	# cp -r twosum.py test_submission
+	# (cd test_submission; ./driver.sh;)
+
+clean:
+	rm -rf *~ autograder
