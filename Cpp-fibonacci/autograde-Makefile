@@ -1,5 +1,5 @@
 all:
-	tar xvf autograder.tar
+	tar xvf autograde.tar
 	cp fib.cpp test_autograder
 	
 	(cd test_autograder; make clean; make)
