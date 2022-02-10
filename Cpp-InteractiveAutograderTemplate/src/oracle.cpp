@@ -116,6 +116,6 @@ int main() {
   cout << "{\"scores\": " + correctness +
               ", \"queries\": " + to_string(n_queries) +
               ", \"correct_answer\": \"" + answer_string +
-              "\", \"array:\": \"" + array_string + "\"}"
+              "\", \"array\": \"" + array_string + "\"}"
        << endl;
 }
