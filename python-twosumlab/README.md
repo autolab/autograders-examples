@@ -8,6 +8,10 @@ Python
 
 Python
 
+### Autograding Environment Packages
+
+pip and python3 are needed for the autograding environment.
+
 ### Assessment Scenario
 
 This example offers a simple Python autograder that allows instructors to test programs with randomly generated test cases, custom-written test cases, and checks for time bounds.
