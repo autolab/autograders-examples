@@ -4,6 +4,8 @@ all:
 	
 	(cd test_autograder; make clean; make)
 
+	./test_autograder/testprogram
+
 clean:
 	rm -rf *~ test_autograder
 	
