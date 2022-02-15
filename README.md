@@ -1,13 +1,5 @@
 This is a repo for example autograders. They are more complicated than hello lab in the documentation but simpler than real life scenario ones. They serve to offer instructors a better starting point with autograder writing in a variety of languages. For a detailed walkthrough of how autograders work, see [documentation](https://docs.autolabproject.com/lab/#writing-autograders).
 
-Current available autograders to refer to:
-
-[Golang-InputOutputTemplate-20211019](https://github.com/autolab/autograders-examples/tree/main/Golang-InputOutputTemplate-20211019)
-
-[Javascript-JestTemplate](https://github.com/autolab/autograders-examples/tree/main/Javascript-JestTemplate)
-
-[Python-PytestTemplate](https://github.com/autolab/autograders-examples/tree/main/Python-PytestTemplate)
-
 ---
 
 For those who are interested in example autograders: We encourage you to download the folder of the autograder that you are interested in and run make to get a sense of how the autograder works and examine the content of autograder.tar.
