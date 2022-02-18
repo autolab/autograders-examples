@@ -3,7 +3,7 @@ INC_DIR = $(TOP_DIR)/inc
 SRC_DIR = $(TOP_DIR)/src
 BUILD_DIR = $(TOP_DIR)/build
 CC=gcc
-FLAGS = -g -Wall -I$(INC_DIR)
+FLAGS = -g -std=c99 -Wall -I$(INC_DIR)
 OBJS = $(BUILD_DIR)/sort.o
 
 default: all

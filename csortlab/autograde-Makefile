@@ -1,11 +1,7 @@
 all:
 	tar xvf autograde.tar
-	cp sort.c C-sortlab-handout/src/
-	cp ../src/src/main.c C-sortlab-handout/src/
-	cp ../src/src/tests.c C-sortlab-handout/src/
-	cp ../src/inc/tests.h C-sortlab-handout/inc/
-	cp ../src/Makefile C-sortlab-handout/
-	(cd C-sortlab-handout; make test)
+	cp sort.c csortlab-handout/src/
+	(cd csortlab-handout; make --no-print-directory test)
 
 clean:
-	rm -rf *~ C-sortlab-handout
+	rm -rf *~ csortlab-handout

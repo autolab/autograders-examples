@@ -1,15 +1,26 @@
 #include <stdio.h>
-#include "tests.h"
+#include "sort.h"
+
+void print_array(int *array, size_t size) {
+    for (size_t i = 0; i < size; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+}
+
+// expand upon this file with your own test cases
 
 int main() {
-    int basic_score = test_basic();
+    int arr[] = {42, 2, 67, -3, 90, 10};
+    size_t n = 6;
 
-    int length_edge_case_score = test_length_edge_cases();
+    printf("Before: ");
+    print_array(arr, n);
 
-    int timing_score = test_timing();
+    sort(arr, n);
 
-    printf("{\"_presentation\": \"semantic\"}\n");
-    printf("{\"scores\": { \"Basic Functionality\": %d, \"Edge cases\": %d, \"Timing\": %d } }\n", basic_score, length_edge_case_score, timing_score);
+    printf("\nAfter: ");
+    print_array(arr, n);
 
     return 0;
 }

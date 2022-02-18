@@ -11,14 +11,16 @@ handout:
 	# Rebuild the handout directory that students download
 	(rm -rf $(LAB)-handout; mkdir $(LAB)-handout)
 	cp -rp src/* $(LAB)-handout
-	rm -f $(LAB)-handout/src/tests.c
-	mv $(LAB)-handout/Makefile-handout $(LAB)-handout/Makefile
-	mv $(LAB)-handout/src/main-handout.c $(LAB)-handout/main.c
 
 handout-tarfile: handout
 	# Build *-handout.tar and autograde.tar
+	tar cvf autograde.tar $(LAB)-handout
+	rm -f $(LAB)-handout/src/tests.c
+	rm -f $(LAB)-handout/src/main.c
+	rm -f $(LAB)-handout/inc/tests.h
+	mv $(LAB)-handout/Makefile-handout $(LAB)-handout/Makefile
+	mv $(LAB)-handout/src/main-handout.c $(LAB)-handout/src/main.c
 	tar cvf $(LAB)-handout.tar $(LAB)-handout
-	cp -p $(LAB)-handout.tar autograde.tar
 
 clean:
 	# Clean the entire lab directory tree.  Note that you can run
