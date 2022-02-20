@@ -1,8 +1,8 @@
 #include "tests.h"
 #include "sort.h"
 
-#define LONG_ARR_LEN 1000000
-#define SHORT_ARR_LEN 1000
+#define LONG_ARR_LEN 10000
+#define SHORT_ARR_LEN 100
 
 int cmp(const void *a, const void *b) {
    return ( *(int*)a - *(int*)b );
@@ -50,36 +50,6 @@ int test_basic(void) {
             score++;
         }
     }
-
-    // int arrays_len_5[3][5] = {
-    //     {0, 1, 2, 3, 4},
-    //     {10, 9, 7, 3, 2},
-    //     {-3, 4, -7, 2, 0}
-    // };
-
-    // for (size_t i = 0; i < 3; i++) {
-    //     sort(arrays_len_5[i], 5);
-    //     if(is_sorted(arrays_len_5[i], 5)) {
-    //         score++;
-    //     }
-    // }
-
-    // int arrays_len_10[7][10] = {
-    //     {10, 9, 8, 7, 6, 5, 4, 3, 2, 1},
-    //     {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
-    //     {-10, 31, 53, 12, 24, 42, 53, 2, 0, -24},
-    //     {7, 7, 7, 7, 7, 7, 7, 7, 7, 7},
-    //     {INT_MAX, INT_MAX, INT_MIN, INT_MIN, INT_MAX, INT_MIN, INT_MAX, INT_MIN, INT_MAX, INT_MIN},
-    //     {53, 913, 100, 1000, 10000, 53, -500000, 99},
-    //     {0, 0, 0, INT_MAX, 0, 0, 0, INT_MIN, 0, 0}
-    // };
-
-    // for (size_t i = 0; i < 7; i++) {
-    //     sort(arrays_len_10[i], 10);
-    //     if(is_sorted(arrays_len_10[i], 10)) {
-    //         score++;
-    //     }
-    // }
 
     return score;
 }
@@ -142,14 +112,14 @@ int test_length_edge_cases(void) {
 /**
  * @brief Tests for timing of the sort implementation
  * 
- * Tests the sorting implementation against two arrays of lengths [1k, 1M],
+ * Tests the sorting implementation against two arrays of lengths [100, 10k],
  * measuring the time spent on each sort. Then compares the ratio between
  * the time. Checks for an O(n log n) implementation.
  * 
- * 50 points - ratio <= 10k
- * 25 points - 10k < ratio <= 1M
- * 10 points - 1M < ratio <= 10M
- * 0 points - ratio > 10M
+ * 50 points - ratio <= 500 (O(n log n))
+ * 25 points - 500 < ratio <= 1.5k
+ * 10 points - 1.5k < ratio <= 15k (approx 0(n^2))
+ * 0 points - ratio > 15k
  * 
  * @return an integer score, out of 50
  */
@@ -199,11 +169,11 @@ int test_timing(void) {
 
     ratio = long_time / short_time;
 
-    if (ratio <= 1e5) {
+    if (ratio <= 500) {
         return 50;
-    } else if (ratio <= 1e6) {
+    } else if (ratio <= 1500) {
         return 25;
-    } else if (ratio <= 1e7) {
+    } else if (ratio <= 15e3) {
         return 10;
     } else {
         return 0;
