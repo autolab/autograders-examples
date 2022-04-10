@@ -15,13 +15,15 @@ Python 3
 
 Python 3 (default libraries)
 
+Note: For ease of installation, a Dockerfile has been included, with installation instructions inside
+
 ### Assessment Scenario
 In this assessment, students need to implement a `cat` program in `cat.bf`. That is, their program should output exactly what it receives as input. Their final score is given by the proportion of inputs for which their program produces the correct output.
 
 ### Handin Format
 The autograder expects a file by the name `cat.bf`.
 
-A sample solution can be found in `src/cat-sol.bf`.
+A sample solution can be found in `catbf-autograde/cat-sol.bf`.
 
 ### autograder.tar Directory Content
 ```
