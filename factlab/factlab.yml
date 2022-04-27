@@ -1,0 +1,24 @@
+---
+general:
+  name: factlab
+  description: 'Find the nth factorial in SML'
+  display_name: FactLab
+  handin_filename: factorial.sml
+  handin_directory: handin
+  max_grace_days: 0
+  handout: factlab-handout.tar
+  writeup: writeup/fact.html
+  max_submissions: -1
+  disable_handins: false
+  max_size: 2
+  has_svn: false
+  category_name: Lab
+problems:
+- name: Correctness
+  description: ''
+  max_score: 100.0
+  optional: false
+autograder:
+  autograde_timeout: 180
+  autograde_image: autograding_sml
+  release_score: true

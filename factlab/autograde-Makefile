@@ -1,0 +1,13 @@
+# 
+# Makefile to manage autograding
+# 
+
+all: copy
+
+copy:
+	tar xvf autograde.tar
+	cp factorial.sml autograde
+	(cd autograde; ./driver.sh)
+
+clean:
+	rm -rf *~ autograde
