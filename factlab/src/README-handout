@@ -1,9 +1,0 @@
-In this assignment you will implement the fact function in factorial.sml.
-
-To test compile use:
-smlnj factorial.sml
-
-Then in the SMLNJ REPL use:
-Factorial.fact 1;
-
-Submit factorial.sml to autolab to recieve you're score.

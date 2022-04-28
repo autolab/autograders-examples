@@ -1,6 +1,0 @@
-structure Factorial =
-struct
-  exception NotYetImplemented
-
-  fun fact n = raise NotYetImplemented
-end
