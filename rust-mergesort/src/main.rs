@@ -27,4 +27,3 @@ fn main() {
     scores["scores"] = data;
     println!("{}", json::stringify(scores));
 }
-
