@@ -1,0 +1,48 @@
+# Rust autograder
+# run the following in terminal
+# cd ~/Tango 
+# docker build -t autograding_rust -f Dockerfile_rust .
+# Then set autograding_rust as the autograding image
+
+FROM rust:latest
+MAINTAINER Joey Wildman <jwildman@andrew.cmu.edu>
+
+# Install package dependencies.
+RUN apt-get update \
+    && apt-get install -y \
+    apt-utils \
+    curl \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update
+RUN apt-get install -y make
+RUN apt-get install -y build-essential
+RUN apt-get install -y git
+RUN apt-get install -y sudo
+
+# Install autodriver
+WORKDIR /home
+RUN useradd autolab
+RUN useradd autograde
+RUN mkdir autolab autograde output
+RUN chown autolab:autolab autolab
+RUN chown autolab:autolab output
+RUN chown autograde:autograde autograde
+RUN git clone https://github.com/autolab/Tango.git
+WORKDIR Tango/autodriver
+RUN make clean && make
+RUN cp autodriver /usr/bin/autodriver
+RUN chmod +s /usr/bin/autodriver
+
+# Clean up
+WORKDIR /home
+RUN apt-get remove -y git
+RUN apt-get -y autoremove
+RUN rm -rf Tango/
+
+# Check installation
+RUN ls -l /home
+RUN which autodriver
+ENV PATH="/root/.cargo/bin:${PATH}"
+RUN which cargo
