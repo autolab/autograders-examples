@@ -1,4 +1,36 @@
-# Autograder for Rust (using Rust!)
+# Rust-Mergesort: An autograder for Rust (using Rust!)
+
+### Assessment Language
+[Rust](https://www.rust-lang.org/)
+
+### Autograder Language
+[Rust](https://www.rust-lang.org/)
+
+### Autograding Environment Packages
+[Rust Official Docker Image](https://hub.docker.com/_/rust)
+
+### Assessment Scenario
+Students need to create a mergesort implementation in Rust that returns a sorted Vector, given a Vector of `i32`s.
+
+### Handin Format
+`student.rs` (look at Installation Instructions for more info)
+
+### autograder.tar Directory Content
+```
+# extracts autograde directory and compiles and runs autograder
+Makefile
+# Autolab top-level autograder
+src/main.rs
+# Autolab lower-level autograder
+autograde/src/main.rs
+# Dockerfile for custom rust image
+Dockerfile_rust
+# reference student solution
+student.rs
+# dependencies, project defintion
+Cargo.toml
+Cargo.lock
+```
 
 ## Disclaimer
 This autograder was written by someone whose first experience working with rust was through this project, so it may not incorporate best practices for rust code.
@@ -19,7 +51,7 @@ This is an autograder that purely makes use of Rust to autograde a mergesort fun
     pub fn mergesort(input: &Vec<i32>) -> Vec<i32> {
     }
     ```
-    
+
 ## To be improved:
 - The grading portion is extremely simple, with the only check being against a single array of 100 elements, with the elements being randomly generated at runtime. There could definitely be more comprehensive tests, such as for the speed of the function using time.
 - Currently, autograding is slow because whenever a file is submitted, Cargo searches for all crates and has to install them, which adds significant time (right now jobs take around 20 seconds). I tried running `cargo search` which indexes crates.io as part of the Dockerfile, which would theoretically speed this step, but then this somehow results in a permission denied error when downloading crates. There should possibly another, more efficient way of installing and compiling libraries.
