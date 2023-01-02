@@ -1,0 +1,12 @@
+"""
+Custom Test Cases should be written in this format:
+
+Each test case is formatted as a list containing:
+1. Name of test
+2. Integer
+3. Points rewarded
+"""
+
+testCases = [
+    ["Example1", 252, 1]
+]

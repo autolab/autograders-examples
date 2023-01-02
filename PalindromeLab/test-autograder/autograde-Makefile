@@ -1,0 +1,7 @@
+all:
+    tar xvf autograde.tar
+    cp -r palindrome.py src
+    (cd src; ./driver.py)
+
+clean:
+    rm -rf *~ src
