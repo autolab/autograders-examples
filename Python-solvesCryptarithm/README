@@ -1,0 +1,12 @@
+solvesCryptarithm Autograder
+
+- /src has all the base files
+    - .py solution file
+    - driver.py which runs the test cases/autogrades and gives you a score
+    - student starter files with -handout at the end of the filename
+- running Makefile (make) will create...
+    - solvesCryptarithm-handout folder for students
+    - autograde.tar & solvesCryptarithm-handout.tar (copies of directories)
+- make test will reset test-autograder directory
+    - moves in autograde-Makefile as the new Makefile
+- running make in test-autograder will run the driver
