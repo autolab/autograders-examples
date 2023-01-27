@@ -10,7 +10,11 @@ Python
 
 ### Autograding Environment Packages
 
-python3 is required for the autograding environment.
+The python3 environment package is not installed on the default autograding_image. To run this autograder, run the following commands in Terminal after adding python3 to the `apt-get install` in your Dockerfile (~/Tango/vmms/Dockerfile), like in the example [here](Dockerfile).
+```
+cd ~/Tango
+docker build -t autograding_image vmms/
+```
 
 ### Assessment Scenario
 
@@ -20,9 +24,9 @@ This example offers a simple Python autograder that allows instructors to test p
 
 solvesCryptarithm.py
 
-### autograder.tar Directory Content
+## autograder.tar Directory Content
 
-# Basic files created by the lab author
+### Basic files created by the lab author
 
 Makefile Builds the lab from src/
 README.md
@@ -31,7 +35,7 @@ src/ Contains all src files and solutions
 test-autograder/ For testing autograder offline
 writeup/ Lab writeup that students view from Autolab
 
-# Files created by running make
+### Files created by running make
 
 solvesCryptarithm-handout/ The directory that is handed out to students, created
 using files from src/.
@@ -39,22 +43,14 @@ solvesCryptarithm-handout.tar Archive of hello-handout directory
 autograde.tar File that is copied to the autograding instance
 (along with autograde-Makefile and student handin file)
 
-# Files created and managed by Autolab
+### Files created and managed by Autolab
 
 handin/ All students handin files
 solvesCryptarithm.rb Config file
 solvesCryptarithm.yml Database properties that persist from semester to semester
 log.txt Log of autograded submissions
 
-### Python3 environment package
-
-The python3 environment package is not installed on the default autograding_image. To run this autograder, run the following commands in Terminal after adding python3 to the `apt-get install` in your Dockerfile (~/Tango/vmms/Dockerfile), like in the example [here](Dockerfile).
-```
-cd ~/Tango
-docker build -t autograding_image vmms/
-```
-
-### Further Notes on Autograder
+## Further Notes on Autograder
 
 /src has all the base files
 - .py solution file
