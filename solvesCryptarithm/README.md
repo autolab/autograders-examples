@@ -59,6 +59,7 @@ log.txt Log of autograded submissions
 running Makefile (make) will create...
 - solvesCryptarithm-handout folder for students
 - autograde.tar & solvesCryptarithm-handout.tar (copies of directories)
+
 `make test` will reset test-autograder directory
 - moves in autograde-Makefile (which runs the driver) to the test-autograder directory as Makefile
 - running `make` in the test-autograder directory will run the autograder tests
