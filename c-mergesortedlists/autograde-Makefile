@@ -1,0 +1,7 @@
+all: 
+	tar xvf autograde.tar
+	cp mergesortedlists.c mergesortedlists-autograder
+	(cd mergesortedlists-autograder; gcc driver.c mergesortedlists.c -o driver -Wall; ./driver)
+
+clean:
+	rm -rf *~ mergesortedlists-autograder
