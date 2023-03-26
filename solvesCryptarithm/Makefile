@@ -7,19 +7,19 @@ handout:
     # Rebuild the handout directory that students download
 	(rm -rf $(LAB)-handout; mkdir $(LAB)-handout)
 	cp -p src/README-handout $(LAB)-handout/README
-	cp -p src/solvesCryptarithm.py-handout $(LAB)-handout/solvesCryptarithm.py
+	cp -p src/solvescryptarithm.py-handout $(LAB)-handout/solvescryptarithm.py
 	cp -p src/driver.py $(LAB)-handout/driver.py
 
 handout-tarfile: handout
     # Build *-handout.tar and autograde.tar
 	tar cvf $(LAB)-handout.tar $(LAB)-handout
-	tar cvf autograde.tar solvesCryptarithm-handout
+	tar cvf autograde.tar solvescryptarithm-handout
 
 test: 
 	(rm -rf test-autograder; mkdir test-autograder)
 	cp -p autograde-Makefile test-autograder/Makefile
 	cp -p autograde.tar test-autograder/autograde.tar
-	cp -p src/solvesCryptarithm.py test-autograder/solvesCryptarithm.py
+	cp -p src/solvescryptarithm.py test-autograder/solvescryptarithm.py
 
 clean:
     # Clean the entire lab directory tree.  Note that you can run

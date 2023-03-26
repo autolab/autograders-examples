@@ -1,12 +1,12 @@
 ---
 general:
-  name: solvesCryptarithm
+  name: solvescryptarithm
   description: ''
-  display_name: solvesCryptarithm
-  handin_filename: solvesCryptarithm.py
+  display_name: solvescryptarithm
+  handin_filename: solvescryptarithm.py
   handin_directory: handin
   max_grace_days: 0
-  handout: solvesCryptarithm-handout.tar
+  handout: solvescryptarithm-handout.tar
   writeup: writeup/writeup.html
   max_submissions: -1
   disable_handins: false

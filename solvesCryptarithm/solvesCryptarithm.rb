@@ -1,10 +1,10 @@
 require "AssessmentBase.rb"
 
-module SolvesCryptarithm
+module Solvescryptarithm
   include AssessmentBase
 
   def assessmentInitialize(course)
-    super("solvesCryptarithm",course)
+    super("solvescryptarithm",course)
     @problems = []
   end
 

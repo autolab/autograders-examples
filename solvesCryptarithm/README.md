@@ -1,4 +1,4 @@
-# Python Autograder Template with solvesCryptarithm
+# Python Autograder Template with solvescryptarithm
 
 ### Assessment Language
 
@@ -16,13 +16,18 @@ cd ~/Tango
 docker build -t autograding_image vmms/
 ```
 
+You can also just run the following command inside the solvescryptarithm directory:
+```
+docker build -t autograding_image .
+```
+
 ### Assessment Scenario
 
-This example offers a simple Python autograder that allows instructors to test programs that attempt the solvesCryptarithm problem. Read the [problem writeup](writeup/writeup.html) for details.
+This example offers a simple Python autograder that allows instructors to test programs that attempt the solvescryptarithm problem. Read the [problem writeup](writeup/writeup.html) for details.
 
 ### Handin Format
 
-solvesCryptarithm.py
+solvescryptarithm.py
 
 ## autograder.tar Directory Content
 
@@ -37,17 +42,17 @@ writeup/ Lab writeup that students view from Autolab
 
 ### Files created by running make
 
-solvesCryptarithm-handout/ The directory that is handed out to students, created
+solvescryptarithm-handout/ The directory that is handed out to students, created
 using files from src/.
-solvesCryptarithm-handout.tar Archive of hello-handout directory
+solvescryptarithm-handout.tar Archive of hello-handout directory
 autograde.tar File that is copied to the autograding instance
 (along with autograde-Makefile and student handin file)
 
 ### Files created and managed by Autolab
 
 handin/ All students handin files
-solvesCryptarithm.rb Config file
-solvesCryptarithm.yml Database properties that persist from semester to semester
+solvescryptarithm.rb Config file
+solvescryptarithm.yml Database properties that persist from semester to semester
 log.txt Log of autograded submissions
 
 ## Further Notes on Autograder
@@ -57,8 +62,8 @@ log.txt Log of autograded submissions
 - driver.py which runs the test cases/autogrades and gives you a score
 - student starter files with -handout at the end of the filename
 running Makefile (make) will create...
-- solvesCryptarithm-handout folder for students
-- autograde.tar & solvesCryptarithm-handout.tar (copies of directories)
+- solvescryptarithm-handout folder for students
+- autograde.tar & solvescryptarithm-handout.tar (copies of directories)
 
 `make test` will reset test-autograder directory
 - moves in autograde-Makefile (which runs the driver) to the test-autograder directory as Makefile

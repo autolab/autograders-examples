@@ -1,4 +1,4 @@
-import solvesCryptarithm, random, string
+import solvescryptarithm, random, string
 
 def shuffleWord(s):
     s = list(s)
@@ -11,7 +11,7 @@ def test(name, tests):
         puzzle = test[0]
         solution = test[1]
         expectedResult = test[2]
-        studentResult = solvesCryptarithm.solvesCryptarithm(puzzle, solution)
+        studentResult = solvescryptarithm.solvesCryptarithm(puzzle, solution)
         if studentResult == expectedResult: score += 1
         else: print(f'Test failed: solvesCryptarithm({puzzle}, {solution})')
     print(f'{name} Tests Score: {score}/{len(tests)}')
