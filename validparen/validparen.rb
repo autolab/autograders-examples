@@ -1,6 +1,6 @@
 require "AssessmentBase.rb"
 
-module Cvalidparen
+module Validparen
   include AssessmentBase
 
   def assessmentInitialize(course)
