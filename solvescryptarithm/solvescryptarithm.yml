@@ -1,0 +1,28 @@
+---
+general:
+  name: solvescryptarithm
+  description: ''
+  display_name: solvescryptarithm
+  handin_filename: solvescryptarithm.py
+  handin_directory: handin
+  max_grace_days: 0
+  handout: solvescryptarithm-handout.tar
+  writeup: writeup/writeup.html
+  max_submissions: -1
+  disable_handins: false
+  max_size: 2
+  has_svn: false
+  category_name: Lab
+problems:
+- name: Basic Tests
+  description: ''
+  max_score: 10
+  optional: false
+- name: Random Tests
+  description: ''
+  max_score: 10
+  optional: false
+autograder:
+  autograde_timeout: 180
+  autograde_image: autograding_image
+  release_score: true
