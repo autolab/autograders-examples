@@ -1,0 +1,19 @@
+For this lab, you should write a Python program called "Solves Cryptarithm".
+
+Problem from CMU CS Academy.
+
+Background: A cryptarithm is a puzzle where we start with a simple arithmetic statement but then we replace all the digits with letters (where the same digit is replaced by the same letter each time). We will limit such puzzles to strings the form 'A + B = C' (always exactly one space on either side of '+' and '=').
+
+For example, 'SEND + MORE = MONEY' is such a puzzle. The solution to a cryptarithm is an assignment of digits to the letters to make the math work out properly. For example, if we assign 0 to 'O', 1 to 'M', 2 to 'Y', 5 to 'E', 6 to 'N', 7 to 'D', 8 to 'R', and 9 to 'S' we get:
+
+  S E N D       9 5 6 7
+
++ M O R E     + 1 0 8 5
+
+-----------  ------------
+
+M O N E Y     1 0 6 5 2
+
+Next, we need a way to represent a possible solution. For that, we will use a single string solution of length 10, where solution[0] is the letter corresponding to the digit 0, solution[1] is the letter corresponding to the digit 1, and so on. We use '-' to represent unassigned digits. For example, the string 'OMY--ENDRS' represents the assignments listed in the 'SEND + MORE = MONEY' example.
+
+With this in mind, write the function solvesCryptarithm(puzzle, solution) which takes a puzzle (such as 'SEND + MORE = MONEY') and a proposed solution (such as 'OMY--ENDRS'). Your function should return True if substituting the digits from the solution back into the puzzle results in a mathematically correct addition problem, and False otherwise. You do not have to check whether a letter occurs more than once in the proposed solution, but you do have to verify that all the letters in the puzzle occur somewhere in the solution.
