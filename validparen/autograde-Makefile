@@ -1,0 +1,7 @@
+all:
+	tar xvf autograde.tar
+	cp validparen.c autograde
+	(cd autograde; make; python3 driver.py)
+
+clean:
+	rm -rf *~ autograde
