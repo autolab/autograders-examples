@@ -20,7 +20,7 @@ palindrome.py
 <h2>Autograder.tar directory content</h2>
 <li>
 <ul><b>Makefile:</b> Builds the lab</ul>
-<ul><b>Src:</b> Contains autograderand solutions</ul>
+<ul><b>Src:</b> Contains autograder and solutions</ul>
 <ul><b>Palindrome.py-handout</b> Actual file that the students receives, custom test cases, and the autograder.</ul>
 </li>
 
