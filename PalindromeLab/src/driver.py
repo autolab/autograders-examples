@@ -106,6 +106,7 @@ basicScore = randomTest(numberOfTests)
 testCountPassed = basicScore + customCorrectCount
 testCountFailed = numberOfTests + customCount - testCountPassed - customCorrectCount
 score = basicScore + customTestScore
+correctness = testCountPassed / numberOfTests
 
 print(f"""
       Test Summary\n
@@ -113,7 +114,7 @@ print(f"""
       Passed: ${testCountPassed}\n
       Failed: ${testCountFailed}\n
       Score: ${score}\n
-      Correctness: 
+      Correctness: ${correctness}\n
       """)
 
 
