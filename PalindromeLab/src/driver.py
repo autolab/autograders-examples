@@ -36,10 +36,10 @@ def randomTest(numTests):
         number = random.randint(0, 2**30-1)
         res = palindrome.palindrome(number)
         if isValid(number, res):
-            print(f"Passed test number ${i} of ${numTests}. Input: ${number}, Result: ${res}")
+            print(f"Passed test number {i} of {numTests}. Input: {number}, Result: {res}")
             score += 1
         else:
-            print(f"Failed test number ${i} of ${numTests}. Input: ${number}, Result: ${res}")
+            print(f"Failed test number {i} of {numTests}. Input: {number}, Result: {res}")
     print('')
     
     return score
@@ -64,11 +64,11 @@ def customTest(testCases):
         # check if the user gets a correct answer for custom test cases
         answer = palindrome.palindrome(integer)
         if isValid(integer, answer):
-            print(f"Test Passed, number: ${integer}")
+            print(f"Test Passed, number: {integer}")
             score += allocatedScore
             correctCount += 1
         else:
-            print(f"Test failed, number: ${integer}")
+            print(f"Test failed, number: {integer}")
         
     return (count, score, correctCount)
 
@@ -106,15 +106,15 @@ basicScore = randomTest(numberOfTests)
 testCountPassed = basicScore + customCorrectCount
 testCountFailed = numberOfTests + customCount - testCountPassed - customCorrectCount
 score = basicScore + customTestScore
-correctness = testCountPassed / numberOfTests
+correctness = round(testCountPassed / (customCount + numberOfTests) * 100)
 
 print(f"""
       Test Summary\n
-      Tests ran: ${numberOfTests}\n
-      Passed: ${testCountPassed}\n
-      Failed: ${testCountFailed}\n
-      Score: ${score}\n
-      Correctness: ${correctness}\n
+      Tests ran: {numberOfTests}\n
+      Passed: {testCountPassed}\n
+      Failed: {testCountFailed}\n
+      Score: {score}\n
+      Correctness: {correctness}%\n
       """)
 
 
