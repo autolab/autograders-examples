@@ -10,14 +10,17 @@ all: handout handout-tarfile
 handout:
 		# Rebuild the handout directory that students download
 		(rm -rf $(LAB)-handout; mkdir $(LAB)-handout)
-		cp -p src/palindrome.py-handout $(LAB)/palindrome.py
-		cp -p src/driver.py $(LAB)/driver.py
-		cp -p src/tests.py $(LAB)/tests.py
+		cp -p src/palindrome.py-handout $(LAB)-handout/palindrome.py
+		cp -p src/driver.py $(LAB)-handout/driver.py
+		cp -p src/tests.py $(LAB)-handout/tests.py
 
 handout-tarfile: handout
 		# Build *-handout.tar and autograde.tar
-		tar cvf $(LAB)-handout.tar $(LAB)-handout
-		cp -p $(LAB)-handout.tar autograde.tar
+		gtar -cvf autograde.tar PalindromeLab-handout
+		gtar -cvf $(LAB)-handout.tar PalindromeLab-handout
+
+#		tar cvf $(LAB)-handout.tar $(LAB)-handout
+#		cp -p $(LAB)-handout.tar autograde.tar
 
 clean:
 		# Clean the entire lab directory tree.  Note that you can run
@@ -25,7 +28,7 @@ clean:
 		# adverse effects.s
 		rm -f *~ *.tar
 		(cd src; make clean)
-		(cd test-autograder; make clean)
+#		(cd test-autograder; make clean)
 		rm -rf $(LAB)-handout
 		rm -f autograde.tar
 #

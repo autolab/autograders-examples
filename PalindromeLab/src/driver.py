@@ -108,14 +108,20 @@ testCountFailed = numberOfTests + customCount - testCountPassed - customCorrectC
 score = basicScore + customTestScore
 correctness = round(testCountPassed / (customCount + numberOfTests) * 100)
 
-print(f"""
-      Test Summary\n
-      Tests ran: {numberOfTests}\n
-      Passed: {testCountPassed}\n
-      Failed: {testCountFailed}\n
-      Score: {score}\n
-      Correctness: {correctness}%\n
-      """)
+# print(f"""
+#       Test Summary\n
+#       Tests ran: {numberOfTests + customCount}\n
+#       Passed: {testCountPassed}\n
+#       Failed: {testCountFailed}\n
+#       Score: {score}\n
+#       Correctness: {correctness}%\n
+#       """)
+
+print("{\"scores\": {\"Correctness\": %s, \"Score\": %s}}" % (correctness, score))
+
+
+
+
 
 
         
