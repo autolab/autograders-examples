@@ -25,7 +25,7 @@ handout-tarfile: handout
 clean:
 		# Clean the entire lab directory tree.  Note that you can run
 		# "make clean; make" at any time while the lab is live with no
-		# adverse effects.s
+		# adverse effects
 		rm -f *~ *.tar
 		(cd src; make clean)
 #		(cd test-autograder; make clean)
