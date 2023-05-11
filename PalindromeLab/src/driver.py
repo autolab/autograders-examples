@@ -1,6 +1,5 @@
 import random
 import palindrome
-import time
 from tests import testCases
 
 '''
@@ -72,33 +71,6 @@ def customTest(testCases):
         
     return (count, score, correctCount)
 
-'''
-Test time
-'''
-def timeTest(lowerBound, upperBound):
-    # random integer within the size boundaries
-    integer = random.randint(lowerBound, upperBound)
-    start = time.time()
-    res = palindrome.palindrome(integer)
-    # check if result is correct
-    if not isValid(integer, res):
-        return -1
-    end = time.time()
-    # calculate time
-    timeTaken = end - start
-    return timeTaken
-    
-def timeTestResult():
-    for i in range(10):
-        smallNumber = timeTest(0, 2**10)
-        largeNumber = timeTest(2**25, 2**30-1)
-        if smallNumber < 0 or largeNumber < 0:
-            print("Program returned wrong answers")
-            return 1
-        if smallNumber > 10000 or largeNumber > 10000:
-            print("Program timed out")
-            return 1
-    return 0
 
 customCount, customTestScore, customCorrectCount = customTest(testCases)
 numberOfTests = 100
@@ -108,16 +80,8 @@ testCountFailed = numberOfTests + customCount - testCountPassed - customCorrectC
 score = basicScore + customTestScore
 correctness = round(testCountPassed / (customCount + numberOfTests) * 100)
 
-# print(f"""
-#       Test Summary\n
-#       Tests ran: {numberOfTests + customCount}\n
-#       Passed: {testCountPassed}\n
-#       Failed: {testCountFailed}\n
-#       Score: {score}\n
-#       Correctness: {correctness}%\n
-#       """)
 
-print("{\"scores\": {\"Correctness\": %s, \"Score\": %s}}" % (correctness, score))
+print("{\"scores\": {\"Correctness\": %s}}" % correctness)
 
 
 
