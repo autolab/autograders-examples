@@ -82,11 +82,3 @@ correctness = round(testCountPassed / (customCount + numberOfTests) * 100)
 
 
 print("{\"scores\": {\"Correctness\": %s}}" % correctness)
-
-
-
-
-
-
-        
-        

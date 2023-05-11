@@ -21,4 +21,3 @@ Explanation: From left to right, it reads as -141. From right to left, it reads 
 Input: x = 10
 Output: false
 Explanation: From left to right, it reads 10. From right to left, it reads 01. Hence, it is not a palindrome. 
-
