@@ -23,7 +23,6 @@ def isValid(input, answer):
             return False
     return False
 
-
 '''
 Runs a series of randomly generated numbers and checks if the
 user has a correct answer
@@ -71,14 +70,11 @@ def customTest(testCases):
         
     return (count, score, correctCount)
 
-
 customCount, customTestScore, customCorrectCount = customTest(testCases)
 numberOfTests = 100
 basicScore = randomTest(numberOfTests)
 testCountPassed = basicScore + customCorrectCount
 testCountFailed = numberOfTests + customCount - testCountPassed - customCorrectCount
-score = basicScore + customTestScore
 correctness = round(testCountPassed / (customCount + numberOfTests) * 100)
-
 
 print("{\"scores\": {\"Correctness\": %s}}" % correctness)
