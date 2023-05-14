@@ -23,6 +23,7 @@ def isValid(input, answer):
             return False
     return False
 
+
 '''
 Runs a series of randomly generated numbers and checks if the
 user has a correct answer
@@ -34,13 +35,14 @@ def randomTest(numTests):
         number = random.randint(0, 2**30-1)
         res = palindrome.palindrome(number)
         if isValid(number, res):
-            print(f"Passed test number {i} of {numTests}. Input: {number}, Result: {res}")
+            print(f"Passed test number {i+1} of {numTests}. Input: {number}, Result: {res}")
             score += 1
         else:
-            print(f"Failed test number {i} of {numTests}. Input: {number}, Result: {res}")
+            print(f"Failed test number {i+1} of {numTests}. Input: {number}, Result: {res}")
     print('')
     
     return score
+
 
 '''
 Runs custom test cases (presented as an array)
@@ -68,7 +70,8 @@ def customTest(testCases):
         else:
             print(f"Test failed, number: {integer}")
         
-    return (count, score, correctCount)
+    return count, score, correctCount
+
 
 customCount, customTestScore, customCorrectCount = customTest(testCases)
 numberOfTests = 100

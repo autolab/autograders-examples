@@ -19,9 +19,6 @@ handout-tarfile: handout
 		gtar -cvf autograde.tar PalindromeLab-handout
 		gtar -cvf $(LAB)-handout.tar PalindromeLab-handout
 
-#		tar cvf $(LAB)-handout.tar $(LAB)-handout
-#		cp -p $(LAB)-handout.tar autograde.tar
-
 clean:
 		# Clean the entire lab directory tree.  Note that you can run
 		# "make clean; make" at any time while the lab is live with no
