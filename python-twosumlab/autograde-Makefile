@@ -1,6 +1,6 @@
 all:
 	tar xvf autograde.tar
-	cp -r palindrome.py src
+	cp -r twosum.py src
 	(cd src; python driver.py;)
 
 clean:
