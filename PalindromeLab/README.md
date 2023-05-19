@@ -19,6 +19,7 @@ The function checks whether the integer is a palindrome
 palindrome.py
 
 <h2>Autograder.tar directory content</h2>
+
 - **Makefile**: Builds the lab
 - **Src**: Contains autograder and solutions
 - **PalindromeLab-handout**: Actual file that the students receives, custom test cases, and the autograder.
