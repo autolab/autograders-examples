@@ -1,4 +1,4 @@
-<h1>Python Autograder Template with Palindrome Lab</h1>
+<h1>Palindrome Lab</h1>
 
 <h2>Assessment Language</h2>
 Python
