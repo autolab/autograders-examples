@@ -1,0 +1,23 @@
+For this lab, you should write a Python program, called "palindrome.py"
+
+Given an integer x, you should return true if x is a palindrome and false otherwise.
+
+You may assume that the number will always be an integer.
+
+**Example 1:**
+
+Input: x = 242
+Output: true
+Explanation: 242 reads as 242 from left to right and from right to left.
+
+**Example 2:**
+
+Input: x = -141
+Output: false
+Explanation: From left to right, it reads as -141. From right to left, it reads as 141-. Hence, it is not a palindrome.
+
+**Example 3:**
+
+Input: x = 10
+Output: false
+Explanation: From left to right, it reads 10. From right to left, it reads 01. Hence, it is not a palindrome. 

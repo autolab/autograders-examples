@@ -1,0 +1,7 @@
+all:
+		tar xvf autograde.tar
+		cp palindrome.py PalindromeLab-handout
+		(cd PalindromeLab-handout; python3 driver.py)
+
+clean:
+		rm -rf *~ src
