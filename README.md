@@ -6,7 +6,7 @@ For those who are interested in example autograders: We encourage you to downloa
 
 ---
 
-For devs: Upload your autograder as a folder in this repository and copy the template below to README.md in your folder to document your autograder. Name your folder with the following format: Assessment Language-Functionality or lab name-Date Uploaded (YYYYMMDD), e.g. Golang-sortlab-20211018
+For devs: Upload your autograder as a folder in this repository and copy the template below to README.md in your folder to document your autograder. Name your folder with the following format: Assessment Language-Functionality or lab name, e.g. Golang-sortlab
 Your folder should contain autograde.tar, autograde-Makefile, a reference student submission file, an uncompressed autograde.tar directory, and NOTHING ELSE.
 Thoroughly comment your autograde-Makefile.
 
