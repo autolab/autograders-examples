@@ -14,7 +14,7 @@ fi
 
 # Run the code
 echo "Testing java Missing"
-java TestMissing
+java -ea TestMissing
 status=$?
 if [ ${status} -eq 0 ]; then
     echo "Success: java Missing runs with an exit status of 0"
