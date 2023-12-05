@@ -10,10 +10,10 @@ public class TestMissing {
   public static void main(String[] args) {
     // Can only receive credit if all tests are passed
     assert Missing.findSmallestMissingPositive(emptyArray) == 1;
-    assert Missing.findSmallestMissingPositive(emptyArray) == 1;
-    assert Missing.findSmallestMissingPositive(emptyArray) == 2;
-    assert Missing.findSmallestMissingPositive(emptyArray) == 2;
-    assert Missing.findSmallestMissingPositive(emptyArray) == 10;
-    assert Missing.findSmallestMissingPositive(emptyArray) == 4;
+    assert Missing.findSmallestMissingPositive(singleElementArray) == 1;
+    assert Missing.findSmallestMissingPositive(justOneArray) == 2;
+    assert Missing.findSmallestMissingPositive(oddsArray) == 2;
+    assert Missing.findSmallestMissingPositive(missingLastArray) == 10;
+    assert Missing.findSmallestMissingPositive(randomMissingArray) == 4;
   }
 }
