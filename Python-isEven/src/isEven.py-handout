@@ -1,0 +1,10 @@
+'''
+Parameters:
+x : an integer
+
+Return: 
+True if x is even, False otherwise (boolean value)
+
+'''
+def isEven(x):
+  return True
