@@ -1,0 +1,22 @@
+For this lab, you will be the finding the maximum sum of a subarray, given an integer array. 
+A subarray is defined as a non-empty, contiguous subsequence within an array. 
+
+Note that the given array may contain negative numbers. 
+
+**Example 1:**
+
+Input: x = [-2,1,-3,4,-1,2,1,-5,4]
+Output: 6
+Explanation: The subarray [4,-1,2,1] has the largest sum 6.
+
+**Example 2:**
+
+Input: x = [-1, -2, -3]
+Output: -1
+Explanation: Each subarray must have at least one element, so the subarray [-1] has the largest sum. 
+
+**Example 3:**
+
+Input: x = [5, 4, -1, 7, 8]
+Output: 23
+Explanation: The subarray [5, 4, -1, 7, 8] has the largest sum. 

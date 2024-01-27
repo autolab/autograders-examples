@@ -1,0 +1,10 @@
+"""
+Params:
+nums: an integer array
+
+Return:
+the maximum sum of a subarray in nums
+"""
+
+def maxsubarray(nums):
+    return 0
