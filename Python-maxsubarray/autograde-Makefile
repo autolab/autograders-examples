@@ -5,4 +5,6 @@ all:
 		(cd Python-maxsubarray-handout; python3 driver.py)
 
 clean:
-		rm -rf *~ src
+		rm -rf *~ 
+		
+		
