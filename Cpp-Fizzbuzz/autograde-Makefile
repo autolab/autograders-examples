@@ -1,0 +1,11 @@
+all:
+	tar xvf autograde.tar
+	tar xvf handin.tar
+	cp fizzbuzz.cpp test_autograder
+	
+	(cd test_autograder; make clean; make)
+
+	./test_autograder/testprogram
+
+clean:
+	rm -rf *~ test_autograder
