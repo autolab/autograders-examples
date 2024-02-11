@@ -1,5 +1,5 @@
 # Instructions:
-# Run: docker build -t autograding_validparen .
+# Run: docker build -t autograding_maxsubarray .
 
 FROM ubuntu:22.04
 MAINTAINER David Wang <dfwang@andrew.cmu.edu>
