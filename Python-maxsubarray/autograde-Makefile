@@ -1,0 +1,10 @@
+all:
+		tar xvf autograde.tar
+		tar xzvf handin.tgz
+		cp maxsubarray.py Python-maxsubarray-handout
+		(cd Python-maxsubarray-handout; python3 driver.py)
+
+clean:
+		rm -rf *~ 
+		
+		
