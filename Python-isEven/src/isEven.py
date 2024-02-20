@@ -1,2 +1,4 @@
 def isEven(x):
-  return (x%2==0)
+    if not isinstance(x, int):
+        raise ValueError("Input must be an integer")
+    return (x % 2 == 0)

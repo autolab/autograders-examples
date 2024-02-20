@@ -7,4 +7,5 @@ True if x is even, False otherwise (boolean value)
 
 '''
 def isEven(x):
+  # TODO: Replace the line below with your implementation to check if x is even
   return True

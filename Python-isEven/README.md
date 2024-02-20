@@ -19,5 +19,5 @@ isEven.py
 
 <h2>Autograder.tar directory content</h2>
 
-- **Python-isEven-handout**: Contains the autograder, a solution to the problem, and test cases
+- **Python-isEven-grading**: Contains the autograder, a solution to the problem, and test cases
 - **src**: Contains autograder and solutions
