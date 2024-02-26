@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <type_traits>
 
 #include "fizzbuzz.hpp"
 #include "json.hpp"
@@ -24,6 +25,7 @@ int main() {
   std::srand(std::time(nullptr));
 
   int test_int_1 = 30;
+  static_assert(std::is_same<decltype(fizzbuzz(test_int_1)), std::string>::value, "Function fizzbuzz must return a string.");
   if (fizzbuzz(test_int_1) == fizzbuzz_ref(test_int_1)) {
     result["scores"]["Problem 1"] = 1;
   } else {
