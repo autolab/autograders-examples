@@ -1,6 +1,6 @@
 all:
 		tar xvf autograde.tar
-		cp ./src/handin.py Python-isEven-grading
+		cp isEven.py Python-isEven-grading
 		(cd Python-isEven-grading; python3 driver.py)
 
 clean:
