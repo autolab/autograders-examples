@@ -1,0 +1,17 @@
+For this lab, you should write a Python program, called "isEven.py"
+
+Given an integer x, you should return True if x is even and False otherwise.
+
+You may assume that the number will always be an integer.
+
+**Example 1:**
+
+Input: x = 72
+Output: True
+Explanation: 72 is even
+
+**Example 2:**
+
+Input: x = -13
+Output: False
+Explanation: -13 is odd
