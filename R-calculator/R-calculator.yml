@@ -1,0 +1,23 @@
+---
+general:
+  name: calculator
+  description: 'Basic calculator functions'
+  display_name: calculator
+  handin_filename: calculator.R
+  handin_directory: handin
+  max_grace_days: 0
+  handout: calculator-handout.tar
+  writeup: writeup/calculator.html
+  max_submissions: -1
+  disable_handins: false
+  max_size: 2
+  category_name: Lab
+problems:
+- name: Correctness
+  description: ''
+  max_score: 100.0
+  optional: false
+autograder:
+  autograde_timeout: 180
+  autograde_image: autograding_r
+  release_score: true

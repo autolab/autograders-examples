@@ -1,0 +1,7 @@
+all:
+	tar xvf autograde.tar
+	cp -r calculator.R src
+	(cd src && Rscript driver.R;)
+
+clean:
+	rm -rf *~ src

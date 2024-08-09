@@ -1,0 +1,30 @@
+For this lab, you should write a Python program, called "twosum.py".
+
+Given an array of integers `nums` and an integer `target`, your program should return indices of the two numbers such that they add up to target.
+
+You may assume that each input has at least one solution, and you may not use the same element twice.
+
+You can return the answer in any order. Your solution should be in O(n) time for full credit.
+
+**Example 1:**
+
+```
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Output: Because nums[0] + nums[1] == 9, we return [0, 1].
+```
+
+```
+Input: nums = [3, 2, 4], target = 6
+Output: [1, 2]
+Output: Because nums[1] + nums[2] == 6, we return [1, 2].
+```
+
+To compile your work:
+linux> make clean; make;
+
+Files:
+README This file
+twosum.py Empty Python file that you will edit
+driver.py Autograding file used to test your submission
+tests.py File for writing custom test cases

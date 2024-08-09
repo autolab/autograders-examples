@@ -1,0 +1,3 @@
+For this lab, you should write a R program, called "calculator.R".
+
+Given two integers a, b, your program should return indices of the final result as a single integer.
