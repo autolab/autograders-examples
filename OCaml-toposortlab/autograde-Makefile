@@ -1,0 +1,11 @@
+all: copy
+
+copy:
+	tar -xvf autograde.tar
+	cp toposort.ml toposortlab_dune/lib
+	cd toposortlab_dune && \
+	dune build && \
+	dune test
+
+clean:
+	rm -r toposortlab_dune
