@@ -1,0 +1,11 @@
+all: copy
+
+copy:
+	tar -xvf autograde.tar
+	cp sort.cpp autograder_folder
+	cd autograder_folder && \
+	g++ sort.cpp test.cpp -o exec && \
+	./exec 
+
+clean:
+	rm -r autograder_folder
